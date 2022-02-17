@@ -1,0 +1,32 @@
+.form-control{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form-select{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#botaodiv{
+    margin-top: 20px;
+    text-align: right;
+  
+}
+
+#botao{
+    background-color: #FF1168;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+#formulario{
+    width: 600px;
+    margin-top: 40px;
+   
+}
+
+#titulo{
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
