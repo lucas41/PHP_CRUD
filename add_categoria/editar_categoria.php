@@ -1,6 +1,6 @@
 <?php
 
-include 'conexao.php';
+include '../conexao.php';
 
 $id = $_GET["id"];
 
@@ -13,7 +13,7 @@ $id = $_GET["id"];
     <meta charset="utf-8">
     <title>Formulário de cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="index.css" rel="stylesheet">
+    <link href="../index.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
@@ -36,10 +36,11 @@ $id = $_GET["id"];
                 <div class="form-group">
                     <label>Nome Categoria</label>
                     <input type="text" class="form-control" name="nomecategoria" value="<?php echo $nomecategoria ?>">
+                    <input type="text"  style="display: none" class="form-control" name="nomeoriginal" value="<?php echo $nomecategoria ?>">
                     <input type="number" class="form-control" name="id" value="<?php echo $id ?>" style="display: none">
                 </div>
                 <div id="botaodiv">
-                <a href="index.php" role="button" class="btn btn-primary btn-sm"> Voltar</a>
+                <a href="lista_categoria.php" role="button" class="btn btn-primary btn-sm"> Voltar</a>
                 <button type="submit" id="botao" class="btn btn-sm"> Atualizar </button>
                 </div>
             <?php

@@ -1,6 +1,6 @@
 <?php
 
-include 'conexao.php';
+include '..\conexao.php';
 
 $nome = $_POST['nome'];     // variavel recebe atraves do Post o name enviado do form
 

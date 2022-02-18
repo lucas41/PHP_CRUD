@@ -1,18 +1,13 @@
-<?php 
+<?php
 
-include 'conexao.php';
+include '..\conexao.php';
 
-$id = $_POST['id'];
+$id = $_GET['id'];
 
-//$nroproduto = $_POST['nroproduto'];     
-$nome = $_POST['nome'];
+$sql = "DELETE FROM `fornecedor` WHERE id = $id";
 
+$deletar = mysqli_query($conexao,$sql);
 
-
-
-$sql = "UPDATE `fornecedor` SET `nome`='$nome' WHERE id = $id";
-
-$atualiza = mysqli_query($conexao, $sql);
 
 ?>
 
@@ -20,7 +15,7 @@ $atualiza = mysqli_query($conexao, $sql);
 
 <div class="container" style="width: 400px; margin-top: 20px;">
 
-    <h4> Fornecedor Atualizado com sucesso </h4>
+    <h4> Fornecedor Deletado com sucesso </h4>
     <div style="margin-top: 20px;">
         <center>
             <a href="lista_fornecedor.php" style="color:white" role="button" class="btn btn-sm btn-warning"> Verificar base de dados</a>

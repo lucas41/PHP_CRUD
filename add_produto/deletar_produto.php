@@ -1,10 +1,10 @@
 <?php
 
-include 'conexao.php';
+include '../conexao.php';
 
 $id = $_GET['id'];
 
-$sql = "DELETE FROM `fornecedor` WHERE id = $id";
+$sql = "DELETE FROM `estoque` WHERE id_estoque = $id";
 
 $deletar = mysqli_query($conexao,$sql);
 
@@ -15,10 +15,10 @@ $deletar = mysqli_query($conexao,$sql);
 
 <div class="container" style="width: 400px; margin-top: 20px;">
 
-    <h4> Fornecedor Deletado com sucesso </h4>
+    <h4> produto Deletado com sucesso </h4>
     <div style="margin-top: 20px;">
         <center>
-            <a href="lista_fornecedor.php" style="color:white" role="button" class="btn btn-sm btn-warning"> Verificar base de dados</a>
+            <a href="listar_produtos.php" style="color:white" role="button" class="btn btn-sm btn-warning"> Verificar base de dados</a>
         </center>
     </div>
 </div>

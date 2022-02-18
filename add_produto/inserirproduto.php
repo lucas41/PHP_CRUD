@@ -1,6 +1,6 @@
 <?php
 
-include 'conexao.php';
+include '../conexao.php';
 
 $nroproduto = $_POST['nroproduto'];     // variavel recebe atraves do Post o name enviado do form
 $nomeproduto = $_POST['nomeproduto'];
@@ -25,7 +25,7 @@ $inserir = mysqli_query($conexao, $sql); // chamar a variavel conexao e passa o 
     <h4> produto adicionado com sucesso </h4>
     <div style="margin-top: 20px;">
         <center>
-            <a href="index.php" role="button" class="btn btn-sm btn-primary"> Cadastrar um novo item </a>
+            <a href="../menu.php" role="button" class="btn btn-sm btn-primary"> Cadastrar um novo item </a>
         </center>
     </div>
 </div>

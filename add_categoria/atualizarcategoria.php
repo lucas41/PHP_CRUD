@@ -1,18 +1,21 @@
 <?php 
 
-include 'conexao.php';
+include '..\conexao.php';
 
 $id = $_POST['id'];
 
 //$nroproduto = $_POST['nroproduto'];     
 $nomecategoria = $_POST['nomecategoria'];
+$nomeoriginal = $_POST['nomeoriginal'];
 
 
 
 
 $sql = "UPDATE `categorias` SET `nomecategoria`='$nomecategoria' WHERE id_categoria = $id";
+$sql2 = "UPDATE `estoque` SET `categoria`='$nomecategoria' WHERE categoria = '$nomeoriginal'";
 
 $atualiza = mysqli_query($conexao, $sql);
+$atualiza2 = mysqli_query($conexao, $sql2);
 
 ?>
 

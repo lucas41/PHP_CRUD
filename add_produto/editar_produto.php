@@ -1,6 +1,6 @@
 <?php
 
-include 'conexao.php';
+include '../conexao.php';
 
 $id = $_GET["id"];
 
@@ -13,7 +13,7 @@ $id = $_GET["id"];
     <meta charset="utf-8">
     <title>Formulário de cadastro</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="index.css" rel="stylesheet">
+    <link href="../index.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
@@ -51,24 +51,45 @@ $id = $_GET["id"];
                     <input type="number" class="form-control" name="quantidade" value="<?php echo $quantidade ?>">
                 </div>
                 <div class="form-group">
-                    <label>Categoria</label>
-                    <select class="form-select" name="categoria" value="<?php echo $categoria ?>">
-                        <option>Perifericos</option>
-                        <option>Hardware</option>
-                        <option>Software</option>
-                        <option>Celulares</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Fornecedor</label>
-                    <select class="form-select" name="fornecedor" value="<?php echo $fornecedor ?>">
-                        <option>A</option>
-                        <option>B</option>
-                        <option>C</option>
-                    </select>
-                </div>
+                <label>Categoria</label>
+                <select class="form-select" name="categoria" required autocomplet="off">
+                    <option selected>Selecione o produto</option>
+                    <?php
+                    $sql = "SELECT * FROM `categorias`";
+                    $buscar = mysqli_query($conexao, $sql);
+                    while ($array = mysqli_fetch_array($buscar)) {
+                        $id_categoria = $array['id_categoria'];
+                        $nomecategoria = $array['nomecategoria'];
+                    ?>
+
+                        <option><?php echo $nomecategoria ?></option>
+
+                    <?php
+                    }
+                    ?>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Fornecedor</label>
+                <select class="form-select" name="fornecedor" required autocomplet="off">
+                    <option selected>Selecione o Fornecedor</option>
+                    <?php
+                    $sql2 = "SELECT * FROM `fornecedor`";
+                    $buscar2 = mysqli_query($conexao, $sql2);
+                    while ($array = mysqli_fetch_array($buscar2)) {
+                        $id = $array['id'];
+                        $nome = $array['nome'];
+                    ?>
+
+                        <option><?php echo $nome ?></option>
+
+                    <?php
+                    }
+                    ?>
+                </select>
+            </div>
                 <div id="botaodiv">
-                <a href="index.php" role="button" class="btn btn-primary btn-sm"> Voltar</a>
+                <a href="listar_produtos.php" role="button" class="btn btn-primary btn-sm"> Voltar</a>
                 <button type="submit" id="botao" class="btn btn-sm"> Atualizar </button>
                 </div>
             <?php

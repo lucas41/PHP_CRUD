@@ -1,6 +1,6 @@
 <?php
 
-include 'conexao.php';
+include '..\conexao.php';
 
 $nomecategoria = $_POST['nomecategoria'];     // variavel recebe atraves do Post o name enviado do form
 
@@ -22,7 +22,7 @@ $inserir = mysqli_query($conexao, $sql); // chamar a variavel conexao e passa o 
     <h4> Categoria adicionada com sucesso </h4>
     <div style="margin-top: 20px;">
         <center>
-            <a href="index.php" role="button" class="btn btn-sm btn-primary"> Cadastrar um novo item </a>
+            <a href="lista_categoria.php" role="button" class="btn btn-sm btn-primary"> Cadastrar um novo item </a>
         </center>
     </div>
 </div>
