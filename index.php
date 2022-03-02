@@ -26,7 +26,7 @@
                 <img src="img/cadeado.png" width="125px" height="125px">
             </center>
             <br>
-            <form>
+            <form action="index1.php" method="post">
                 <div class="form-group">
                     <label> Usuario </label>
                     <input type="text" name="usuario" class="form-control" placeholder="Usuario" autocomplete="off" required>
@@ -35,13 +35,19 @@
                     <label> senha </label>
                     <input type="password" name="senha" class="form-control" placeholder="senha" autocomplete="off" required>
                 </div>
-            </form>
+           
             <br>
             <div style="text-align: right;">
                 <button type="submit" class="btn btn-sm btn-success"> Entrar </button>
             </div>
+            
         </div>
+        </form>
     </div>
+                <br>
+    <center>
+        <p> Ainda não possui cadastro clique <a href="cadastro_usuario_externo.php"> aqui </a></p>
+    </center>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>

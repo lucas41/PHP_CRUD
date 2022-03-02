@@ -10,6 +10,19 @@
 </head>
 
 <body>
+
+
+<?php 
+
+session_start();
+
+$usuario = $_SESSION['usuario'];
+
+if(!isset($_SESSION['usuario'])) {
+  header('location: index.php');
+}
+
+?>
   <div class="container" style="margin-top:100px;">
     <div class="row">
       <div class="col-sm-6">
@@ -56,6 +69,32 @@
       </div>
     </div>
   </div>
+
+  <div class="container" style="margin-top:100px;">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Aprovar </h5>
+            <p class="card-text">Aprovar usuarios cadastrados</p>
+            <a href="aprovarusuario.php" class="btn btn-primary">Aprovar</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Lista de Produto</h5>
+            <p class="card-text">Visualizar, editar e excluir os produtos</p>
+            <a href="add_produto/listar_produtos.php" class="btn btn-primary">Produtos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
