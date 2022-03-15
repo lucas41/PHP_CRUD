@@ -13,3 +13,7 @@
 
 <br>
 <p> Para ultilizar esse projeto em sua maquina local será necessario baixar o xampp em sua maquina o mesmo pode ser adquirdo <a href=""> aqui </a> após baixado e devidamente instalado baixe o projeto e coloque0o na pasta C:/xampp/htdocs e dentro do painel de controle do xampp execute o apache apos isso basta digitar no navegador localhost/CRUD_PHP </p>
+
+
+<h2> Galeria de Imagem </h2>
+
