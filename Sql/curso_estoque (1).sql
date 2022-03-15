@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 15-Mar-2022 às 16:59
+-- Tempo de geração: 15-Mar-2022 às 17:44
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -32,14 +32,6 @@ CREATE TABLE `categorias` (
   `id_categoria` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `categorias`
---
-
-INSERT INTO `categorias` (`nomecategoria`, `id_categoria`) VALUES
-('Celular', 15),
-('Computador', 16);
-
 -- --------------------------------------------------------
 
 --
@@ -55,13 +47,6 @@ CREATE TABLE `estoque` (
   `fornecedor` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `estoque`
---
-
-INSERT INTO `estoque` (`id_estoque`, `nroproduto`, `nomeproduto`, `quantidade`, `categoria`, `fornecedor`) VALUES
-(18, 1, 'Poco x3 pro', 45, 'Celular', 'Namorada Linda gostosa');
-
 -- --------------------------------------------------------
 
 --
@@ -72,15 +57,6 @@ CREATE TABLE `fornecedor` (
   `id` int(11) NOT NULL,
   `nome` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `fornecedor`
---
-
-INSERT INTO `fornecedor` (`id`, `nome`) VALUES
-(6, 'Lucas Delfini Ribeiro da SIlva'),
-(7, 'Danilo Ribeiro da SIlva'),
-(8, 'Namorada Linda gostosa');
 
 -- --------------------------------------------------------
 
@@ -96,13 +72,6 @@ CREATE TABLE `usuarios` (
   `nivelusuario` int(2) NOT NULL,
   `status_usuario` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `usuarios`
---
-
-INSERT INTO `usuarios` (`id_usuario`, `nomeusuario`, `mailusuario`, `senhausuario`, `nivelusuario`, `status_usuario`) VALUES
-(9, 'namoradalinda', 'linda.namorada@mozao', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', 3, 'Ativo');
 
 --
 -- Índices para tabelas despejadas
