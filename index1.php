@@ -13,9 +13,9 @@ $total = mysqli_num_rows($buscar);
 
 
 while($array = mysqli_fetch_array($buscar)){
- $senha = $array['senhausuario'];
+ echo $senha = $array['senhausuario'];
 
- $senhadecodificada = sha1($senhausuario);
+echo $senhadecodificada = sha1($senhausuario);
 
 
 if ($total > 0) {
