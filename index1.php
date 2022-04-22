@@ -22,7 +22,7 @@ if ($total > 0) {
     if($senhadecodificada == $senha){
 
         session_start();
-        $_SESSION['usuario'] = $usuario;
+        echo $_SESSION['usuario'] = $usuario;
         
         header('Location: menu.php');
     } else {
